@@ -172,6 +172,9 @@ public class ImageAdjusterViewWidget extends JPanel implements ChangeListener {
 			large = pixel.getBlue();
 			if(pixel.getBlue() > large){
 				large = pixel.getBlue();
+				if(pixel.getBrightness() > large){
+					large = pixel.getBrightness();
+				}
 			}
 		}
 		return large;
